@@ -22,7 +22,7 @@ const WaveSVG = () => (
     whileInView={{
       y: [0, -10, 0],
       transition: { duration: 4, repeat: Infinity },
-    }} // Subtle wave motion
+    }}
   >
     <path
       fill="url(#waveGradient)"
@@ -222,7 +222,7 @@ const HeroContainer = styled(Box)(({ theme }) => ({
 const Headline = styled(Typography)(({ theme }) => ({
   fontFamily: "Montserrat, sans-serif",
   fontWeight: 700,
-  fontSize: "clamp(2.5rem, 8vw, 4rem)", // Responsive font size
+  fontSize: "clamp(2.5rem, 8vw, 4rem)",
   color: "#FFFFFF",
   letterSpacing: "2px",
   textShadow: "0px 4px 20px rgba(0, 212, 255, 0.6)",
@@ -269,8 +269,6 @@ const FooterText = styled(Typography)(({ theme }) => ({
   padding: "0.5rem 1rem",
   borderRadius: "20px",
   border: "1px solid #00d4ff",
-  position: "absolute",
-  bottom: "2rem",
   transition: "all 0.3s ease",
   zIndex: 2,
   "&:hover": {
@@ -280,8 +278,23 @@ const FooterText = styled(Typography)(({ theme }) => ({
     boxShadow: "0px 6px 15px rgba(0, 212, 255, 0.6)",
   },
   [theme.breakpoints.down("sm")]: {
-    bottom: "1rem",
     padding: "0.4rem 0.8rem",
+  },
+}));
+
+// Enhanced Buttons Container
+const ButtonsContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  gap: "1rem",
+  position: "absolute",
+  bottom: "2rem",
+  left: "50%",
+  transform: "translateX(-50%)",
+  zIndex: 2,
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+    gap: "0.5rem",
+    bottom: "1rem",
   },
 }));
 
@@ -420,7 +433,7 @@ const Home = () => {
             transition={{ duration: 0.3 }}
           >
             <a
-              href="https://www.linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/ezedin-ebrahim-783a5a34b"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -463,33 +476,37 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
         >
-          <motion.div
-            whileHover={{ scale: 1.1, rotate: 2 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <FooterText sx={{ left: "2rem" }}>
-              <a
-                href="https://github.com/yourusername"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                GitHub
-              </a>
-            </FooterText>
-          </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.1, rotate: -2 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <FooterText sx={{ right: "2rem" }}>
-              <a
-                href="/cv.pdf"
-                download="Ezedin_CV.pdf"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                Download CV
-              </a>
-            </FooterText>
-          </motion.div>
+          <ButtonsContainer>
+            <motion.div
+              whileHover={{ scale: 1.1, rotate: 2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <FooterText>
+                <a
+                  href="https://github.com/ez-programmer4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  GitHub
+                </a>
+              </FooterText>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1, rotate: -2 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <FooterText>
+                <a
+                  href="/Ezedin_CV.pdf"
+                  download="Ezedin_CV.pdf"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  Download CV
+                </a>
+              </FooterText>
+            </motion.div>
+          </ButtonsContainer>
         </motion.div>
 
         {/* Scroll Indicator with Smooth Scroll */}
@@ -498,7 +515,7 @@ const Home = () => {
           animate={{ opacity: 0.9, y: 0 }}
           transition={{ duration: 1, delay: 1.2 }}
           whileHover={{ scale: 1.2 }}
-          onClick={() => scrollToSection("about")} // Replace "about" with your next section ID
+          onClick={() => scrollToSection("about")}
         >
           <ScrollIndicator />
         </motion.div>

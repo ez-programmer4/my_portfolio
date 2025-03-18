@@ -13,7 +13,7 @@ const AboutContainer = styled(Box)(({ theme }) => ({
   textAlign: "center",
   padding: "0 2rem",
   background: `
-    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3") no-repeat center/cover,
+    url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D") no-repeat center/cover,
     linear-gradient(135deg, rgba(0, 20, 40, 0.9), rgba(0, 212, 255, 0.4))
   `,
   backgroundBlendMode: "overlay",

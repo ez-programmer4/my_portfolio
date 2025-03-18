@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 import { Typography, Box, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 
-// Enhanced SkillsSection with Fixed Height and Fixed Scrollbar Syntax
+// Enhanced SkillsSection with Fixed Height
 const SkillsSection = styled(Box)(({ theme }) => ({
-  padding: { xs: "2rem 1rem", sm: "3rem 1.25rem", md: "4rem 2rem" },
-  height: "100vh", // Fixed height
+  height: "800px", // Fixed height
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
   textAlign: "center",
+  padding: "4rem 2rem", // Fixed padding, adjusted below for responsiveness
   background: `
     url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3") no-repeat center/cover,
     linear-gradient(135deg, rgba(0, 20, 40, 0.95), rgba(0, 212, 255, 0.6))
@@ -20,9 +20,9 @@ const SkillsSection = styled(Box)(({ theme }) => ({
   color: "#ffffff",
   position: "relative",
   overflow: "hidden",
-  "&::-webkit-scrollbar": { display: "none" }, // Corrected scrollbar hiding
+  "&::-webkit-scrollbar": { display: "none" }, // Hide scrollbar
   "-ms-overflow-style": "none", // IE and Edge
-  "scrollbar-width": "none", // Firefox
+  scrollbarWidth: "none", // Firefox
   "&:before": {
     content: '""',
     position: "absolute",
@@ -49,8 +49,13 @@ const SkillsSection = styled(Box)(({ theme }) => ({
     "0%": { transform: "translateY(-100%)" },
     "100%": { transform: "translateY(100%)" },
   },
+  [theme.breakpoints.down("md")]: {
+    height: "700px", // Slightly smaller for medium screens
+    padding: "3rem 1.5rem",
+  },
   [theme.breakpoints.down("sm")]: {
-    padding: "1.5rem 0.75rem",
+    height: "600px", // Compact for small screens
+    padding: "2rem 1rem",
   },
 }));
 

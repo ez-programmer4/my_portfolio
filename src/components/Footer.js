@@ -373,7 +373,7 @@ const Footer = () => {
               >
                 <SocialIconButton
                   component="a"
-                  href="https://github.com/yourusername"
+                  href="https://github.com/ez-programmer4"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -399,7 +399,7 @@ const Footer = () => {
               >
                 <SocialIconButton
                   component="a"
-                  href="https://www.linkedin.com/in/yourprofile"
+                  href="https://www.linkedin.com/in/ezedin-ebrahim-783a5a34b"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -413,7 +413,7 @@ const Footer = () => {
               >
                 <SocialIconButton
                   component="a"
-                  href="https://twitter.com/yourhandle"
+                  href="https://twitter.com/#"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

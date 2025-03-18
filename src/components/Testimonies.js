@@ -242,20 +242,20 @@ const Testimonials = () => {
   const testimonials = [
     {
       text: "An exceptional developer with a keen eye for detail. Delivered a scalable web app ahead of schedule!",
-      author: "Jane Doe",
-      role: "Project Manager",
+      author: "Hamza Sheihabu",
+      role: "Senior Software Engineer",
       avatar: "https://via.placeholder.com/80",
     },
     {
       text: "Their expertise in full-stack development transformed our project into a seamless, high-performing solution.",
-      author: "John Smith",
-      role: "Tech Lead",
+      author: "Osama Seid",
+      role: "Full-Stack Developer",
       avatar: "https://via.placeholder.com/80",
     },
     {
       text: "A pleasure to work with—creative, reliable, and technically brilliant. Highly recommended!",
-      author: "Emily Chen",
-      role: "Client",
+      author: "Mesud Ahmed",
+      role: "Freelance Software Developer",
       avatar: "https://via.placeholder.com/80",
     },
   ];

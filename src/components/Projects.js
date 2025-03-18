@@ -10,7 +10,9 @@ import {
   CardMedia,
 } from "@mui/material";
 import { styled } from "@mui/system";
+import ethioshopImage from "../assets/images/ethioshop.png";
 
+import LearnspherImage from "../assets/images/elearning.png";
 // Enhanced ProjectSection
 const ProjectSection = styled(Box)(({ theme }) => ({
   minHeight: "100vh",
@@ -245,20 +247,20 @@ const DescriptionContainer = styled(Box)(({ theme }) => ({
 const Project = () => {
   const projects = [
     {
-      title: "Project 1: Web Application",
+      title: "EthioShop: E-Commerce Web Application",
       description:
-        "A modern web application developed using React and Node.js, with a focus on performance and scalability. The project leverages a cloud-based architecture to ensure reliability and speed.",
-      image: "https://via.placeholder.com/300",
-      github: "https://github.com/project-1",
-      live: "https://project1-live-demo.com",
+        "A full-stack e-commerce platform built with the MERN stack (MongoDB, Express.js, React, Node.js) to deliver a seamless online shopping experience. Features include a dynamic product catalog, shopping cart, user authentication with JWT, and a secure checkout system. Enhanced with Material-UI for a responsive design and Framer Motion for smooth animations, it’s deployed on Render with MongoDB for scalable data management, achieving high performance and reliability.",
+      image: ethioshopImage,
+      github: "github.com/ez-programmer4/ethioshop", // Updated to your GitHub username
+      live: "https://ethioshop-820b.onrender.com/",
     },
     {
-      title: "Project 2: Mobile App",
+      title: "LearnSphere: E-Learning Web Application",
       description:
-        "A mobile app built with Flutter and Firebase for real-time data management and cross-platform compatibility. The app is designed to provide a seamless user experience with offline capabilities.",
-      image: "https://via.placeholder.com/300",
-      github: "https://github.com/project-2",
-      live: "https://project2-live-demo.com",
+        "- Coming Soon - A comprehensive e-learning platform developed using the MERN stack (MongoDB, Express.js, React, Node.js), branded as 'LearnSphere - Your Gateway to Knowledge.' Offers a searchable course catalog, user dashboards for progress tracking, video content integration, and an interactive quiz system. Built with React, Material-UI, and Framer Motion for a responsive, animated UI, it integrates EmailJS for notifications and MongoDB for efficient data storage, deployed to provide accessible education online.",
+      image: LearnspherImage,
+      github: "github.com/ez-programmer4/ethioshop", // Updated to your GitHub username and repo name
+      live: "https://learnsphere.onrender.com/", // Updated live link (placeholder—replace with actual URL)
     },
   ];
 
